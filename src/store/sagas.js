@@ -6,7 +6,7 @@ export default function* rootSaga() {
   const sagas = []
   yield all(
     sagas.map(saga =>
-      spawn(function*() {
+      spawn(function* () {
         while (true) {
           try {
             yield call(saga)
